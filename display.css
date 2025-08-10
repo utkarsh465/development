@@ -1,0 +1,24 @@
+div{
+    height: 580px;
+    width: 250px;
+    background-color: black;
+    border-radius: 10%;
+    padding: 25px;
+}
+a{
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+}
+#div2{
+    background-color: yellow;
+    /* visibility: hidden;  */
+}
+#div3{
+    background-color: green;
+} 

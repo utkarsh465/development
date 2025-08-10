@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student forms</title>
+</head>
+<body>
+    <form action="beckend.php">
+        <h4>Registration form</h4>
+
+        <input type="text" placeholder="candidate name">
+
+        <br>
+
+        <input type="password" placeholder="password">
+        <br>
+
+        <h5>select your  class</h5>
+        <br>
+
+        <label for="101">
+            <input type="radio" value = "class xi" id="101" name = "class">class xi
+        </label>
+        <br>
+
+        <label for="102">
+            <input type="radio" value = "class xii" id="102" name = "class">class xii
+        </label>
+
+        <br>
+
+        <h5>interested subject</h5>
+        <br>
+
+        <label for="1011">
+            <input type="checkbox" value = "phy" id="1011" name = "subject">physics
+        </label>
+        <label for="1012">
+            <input type="checkbox" value = "chem" id="1012" name = "subject">chemistry
+        </label>
+        <label for="1013">
+            <input type="checkbox" value = "maths" id="1013" name = "subject">mathemeatics
+        </label>
+        <label for="1014">
+            <input type="checkbox" value = "cse" id="1014" name = "subject">computer science
+        </label>
+        <br>
+        <br>
+        <h5>select your city</h5>
+        <select name="select your city" id="1">
+            <option value="Delhi">delhi</option>
+            <option value="mumbai">mumbai</option>
+            <option value="banglore">patna</option>
+        </select>
+        <br>
+        <br>
+
+        <textarea name="feedback" id="104" placeholder="please give your valuable feedback here" rows = "4"></textarea>
+
+    </form>
+</body>
+</html>

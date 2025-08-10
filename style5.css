@@ -1,0 +1,11 @@
+#box1{
+    height: 1000px;
+    width: 1000px;
+    background-image: url("bgimage1.jpeg");
+    background-size: contain;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+}
