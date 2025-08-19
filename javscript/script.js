@@ -32,7 +32,7 @@
 // console.log(a/=b);
 // console.log(a*=b);
 
-//CONDITIONAL STATEMENT
+// CONDITIONAL STATEMENT
 
 // console.log("before my if statement");
 // let age =23;
@@ -49,7 +49,7 @@
 // }
 
 // PRACTICE QUESTION
-//qs:- create a traffic light system that shows what to do based on color
+// qs:- create a traffic light system that shows what to do based on color
 // let color = "red";
 // if(color === "red"){
 //     console.log("stop");
@@ -80,4 +80,191 @@
 // else{
 //     console.log("aap popcorn le nhi skte");
 // }
+
+// ASSIGNEMENT PART -2
+// Q1
+// let num = 5;
+// if(num%10===0){
+//     console.log("good");
+// }
+// else{
+//     console.log("bad");
+// }
+
+// Q2
+// let name = prompt("enter your name:");
+// let age = prompt("enter your age:");
+
+// let msg = alert("name is age year old");
+// console.log(msg);
+
+// using template literals print the alert
+
+// alert(`${name} is ${age} year old`);
+
+// Q3
+// let month = 6;
+// switch(month){
+//     case 1:
+//         console.log("january");
+//         console.log("february");
+//         console.log("march");
+//         break;
+
+//     case 2:
+//         console.log("april");
+//         console.log("may");
+//         console.log("june");
+//         break;
+
+//     case 3:
+//         console.log("july");
+//         console.log("august");
+//         console.log("september");
+//         break;
+
+//     case 4:
+//         console.log("october");
+//         console.log("november");
+//         console.log("december");
+//         break;
+//     default:
+//         console.log("Invalid month");
+// }
+
+// Q4
+// let str = "baby"
+
+// if((str[0] === "a" || str[0] === "A") && (str.length > 5)){
+//     console.log("golden string");
+// }
+// else{
+//     console.log("not a golden string");
+// }
+
+// Q5
+
+// let a = 10;
+// let b = 50;
+// let c = 30;
+
+// if(a>b && a>c){
+//     console.log("a is largest");
+// }
+// else if(b>c && b >a){
+//     console.log("b is largest");
+// }
+// else{
+//     console.log("c is largest");
+// }
+// Q6
+
+// let num = 32;
+// let nums = 42;
+
+// if(num % 10 === 2 && nums % 10 ===2){
+//     console.log("both numbers end with 2");
+// }
+// else{
+//     console.log("one or both numbers do not end with 2");
+// }
+
+// ASSIGNMENT PART 3
+
+// Q1
+
+// let arr = [7,10,2,-4];
+// let n = 3;                              //any positive  number
+
+// let ans = arr.slice(0,n);
+// console.log(ans);
+
+// Q2
+
+// let arr = [7,10,2,-4];
+// let n = 3;                              //any positive  number
+
+// let ans = arr.splice(arr.length -n);
+// console.log(ans);
+
+// Q3
+
+// let str = prompt("enter a string:")
+// if(str.length == 0){
+//     console.log("blank");
+// }
+// else{
+//     console.log("not blank");
+// }
+
+// Q4
+
+// let str = "UTKaRSH raJ";
+// let idx = 10;
+// if (str[idx] == str[idx].toLowerCase()) {
+//     console.log("characterb is lower case");
+// }
+// else {
+//     console.log("character is not lower case");
+// }
+
+// Q5
+
+// let str = prompt("enter a string:");
+// console.log(`original string: ${str}`);
+// console.log(`string without spaces: ${str.trim()}`);
+
+// Q6
+
+// let arr = [1, 2, 3, 4, 5];
+// let idx = 57;
+
+// if (arr.includes(idx)) {
+//     console.log(idx);                        //CASE 1
+// }
+// else{
+//     console.log("not found");
+// }
+
+// if(arr.indexOf(idx) !== -1){
+//     console.log(idx);
+// }
+// else{
+//     console.log("not found");                   //CASE 2
+// }
+
+// loops
+
+// for (i = 1; i <= 10; i++) {
+//     let nums = i*5;
+//     console.log(nums);
+// }
+
+// for (i = 1; i <= 10; i++) {
+//     let nums = i*2;
+//     console.log(nums);
+// }
+
+// for (i = 1; i <= 10; i++) {
+//     let nums = i*3;
+//     console.log(nums);
+// }
+
+// for (i = 1; i <= 10; i++) {
+//     let nums = i*4;
+//     console.log(nums);
+// }
+
+// for (i = 1; i <= 10; i++) {
+//     let nums = i*6;
+//     console.log(nums);
+// }
+
+// let n = prompt("enter a number:");
+// n = parseInt(n);
+// for (i = n; i <= n*10; i=i+n) {
+//     // let nums = i*6;
+//     console.log(i);
+// }
+
 
