@@ -266,5 +266,11 @@
 //     // let nums = i*6;
 //     console.log(i);
 // }
+// let heroes = [["Iron Man", "Captain America", "Thor"], ["Wonder Woman", "Batman", "Flash"]];
 
-
+// for (let i = 0; i < heroes.length; i++) {
+//     console.log(`List # ${i + 1}`);
+//     for (let j = 0; j < heroes[i].length; j++) {
+//         console.log(heroes[i][j]);
+//     }
+// }
