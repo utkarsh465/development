@@ -274,3 +274,56 @@
 //         console.log(heroes[i][j]);
 //     }
 // }
+
+
+// let arr = [10, 20, 5, 42, 15, 22, 16,];
+// let num = 15;
+// function larger(arr,num) {
+    
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > num) {
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+
+// larger(arr,num);
+
+// const student = {
+//     name: "utkarsh",
+//     age: 20,
+//     eng: 30,
+//     math: 30,
+//     sci: 30,
+//     getAvg(){
+//         let avg =  (this.eng + this.math + this.sci)/3;
+//         console.log(avg);
+//     }
+// };
+
+// student.getAvg();
+
+// try{
+//     console.log(a);
+// }
+// catch(err){
+//     console.log("a is not defined");
+//     console.log(err);
+// }
+
+// const sum = (a, b) => {
+//     return a + b;
+// };
+
+// const pow = (a, b) => {
+//     return a**b;
+// };
+
+// const cube = (a) => {
+//     return a*a*a;
+// };
+
+// const mul = (a, b) => {
+//     return a * b;
+// };
+
