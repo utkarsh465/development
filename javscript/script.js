@@ -347,3 +347,12 @@
 // };
 // console.log(isEven(4));
 // console.log(isEven(5));
+
+const object = {
+    message: 'Hello, World!',
+    logMessage() {
+        console.log(this.message);
+    }
+};
+// setTimeout(object.logMessage, 1000);
+object.logMessage();
