@@ -348,6 +348,7 @@
 // console.log(isEven(4));
 // console.log(isEven(5));
 
+<<<<<<< HEAD
 // const object = {
 //     message: 'Hello, World!',
 //     logMessage() {
@@ -356,3 +357,13 @@
 // };
 // setTimeout(object.logMessage, 1000);
 // object.logMessage();
+=======
+const object = {
+    message: 'Hello, World!',
+    logMessage() {
+        console.log(this.message);
+    }
+};
+// setTimeout(object.logMessage, 1000);
+object.logMessage();
+>>>>>>> eca5464c43c6734557b9eb6bd0b6df3c8b37838e
