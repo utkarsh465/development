@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: white;
+      display: flex;
+      padding: 0%;
+      border: 0%;
+      padding-left: 30%;
+      padding-top: 10%;
+    }
+    #contact-title{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact{
+      display: block;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      unicode-bidi: isolate;
+    }
+    #name{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: text;
+
+    }
+    .label{
+      display: block;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+
+    }
+    #email{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: text;
+
+    }
+
+    #button{
+      background-color: rgba(0, 0, 255, 1);
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+    }
+    #button:hover{
+      background-color: rgba(0, 0, 255, 0.7);
+    }
+    .contact:hover{
+      background-color: #f4f4f4;
+    }
+
+  </style>
+</head>
+<body>
+<div class="contact">
+  <h3 id="contact-title">Contact Us</h3>
+  <label for="name" class="label">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email" class="label">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <button id="button">Submit</button>
+</div>
+</body>
+</html>
