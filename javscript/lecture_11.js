@@ -71,3 +71,95 @@
 //      .catch(()=>{
 //         console.log("promise rejected due to weak connection")
 //      })
+
+// savetoDb("save my given data with the helpm of this code")
+//      .then((result)=>{
+//         console.log("data1 saved successfully");
+//         console.log("result of promises",result)
+//         return savetoDb("utkarsh");
+//      })
+//      .then((result)=>{
+//         console.log("data2 saved successfully");
+//         console.log("result of promises",result)
+//         return savetoDb("hello world");
+//      })
+//      .then((result)=>{
+//         console.log("data3 saved successfully");
+//         console.log("result of promises",result)
+//      })
+//      .catch((error)=>{
+//         console.log("promise rejected due to weak connection")
+//         console.log("error details",error);
+//      })
+
+
+// LETS APPLY PROMISE TO OUR CALLBACK HELL EXAMMPLE
+
+// h1 = document.querySelector("h1");
+// function changeColor(color, delay, ){
+//     return new Promise((resolve)=>{
+//         setTimeout(() => {
+//             h1.style.color = color;
+//             resolve("color changed");
+//         }, delay);
+//     });
+    
+// }
+// changeColor("red",1000)
+// .then((result)=>{
+//         console.log("red color was completed");
+
+//         return changeColor("orange",1000);
+//      })
+//      .then((result)=>{
+//         console.log("orange color completed");
+
+//         return changeColor("blue",1000);
+//      })
+//      .then((result)=>{
+//         console.log("blue color completed");
+//         return changeColor("green",1000);
+//      })
+//      .then((result)=>{
+//         console.log("green color completed");
+//      })
+//      .catch((error)=>{
+//         console.log("promise rejected due to weak connection")
+//         console.log("error details",error);
+//      })
+
+// ASYNC AND AWAIT KEYWORD EXAMPLE
+
+// h1 = document.querySelector("h1");
+// function changeColor(color, delay, ){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             let num = Math.floor(Math.random()*10)+1;
+//             if(num > 3){
+//                 reject("promise rejected")
+//             }
+//             h1.style.color = color;
+//             console.log(`${color} color completed`);
+//             resolve("color changed");
+//         }, delay);
+//     });
+// }
+
+// async function demo(){
+//     try{                                          // to handle the promises
+//         await changeColor("red",1000);
+//         await changeColor("orange",1000);
+//         await changeColor("yellow",1000);
+//         await changeColor("green",1000);
+//         await changeColor("blue",1000);
+//         await changeColor("indigo",1000);
+//         await changeColor("violet",1000);
+//         await changeColor("green",1000);
+//     }
+//     catch(error){                                     // to catch the error if any promise is rejected
+//         console.log("error caught");
+//         console.log(error);
+//     }
+// }
+// demo();
+
