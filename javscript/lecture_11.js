@@ -166,7 +166,7 @@
 // FIRST REQUEST USING FETCH API 
 // fetch(url)
 
-let url  = "https://catfact.ninja/fact";
+//let url  = "https://catfact.ninja/fact";
 
 // fetch(url)
 //     .then((res)=>{
@@ -201,3 +201,67 @@ let url  = "https://catfact.ninja/fact";
 //     }
 //     console.log("function getFacts execution completed");
 // }
+
+
+// AXIOS EXAMPLE
+
+// let url  = "https://catfact.ninja/fact";
+// async function getFacts(){
+//     try{
+//         let res = await axios.get(url);
+//         console.log(res.data.fact);
+//     }
+//     catch(err){
+//         console.log("error occured - ",err);
+//     }
+    
+// }
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click",async() => {
+//     let fact = await getFacts();
+//     console.log(fact);
+//     let p = document.querySelector("#result");
+//     p.innerText = fact;
+// });
+
+
+// let url  = "https://catfact.ninja/fact";
+// async function getFacts(){
+//     try{
+//         let res = await axios.get(url);
+//         return res.data.fact;
+//     }
+//     catch(err){
+//         console.log("error occured - ",err);
+//         return "no fact found";
+//     }
+    
+// }
+
+
+
+
+// let btn = document.querySelector("button");
+// let url2 = "https://dog.ceo/api/breeds/image/random";
+// btn.addEventListener("click",async() => {
+//     let link = await getImage();
+//     let img = document.querySelector("#result");
+//     img.setAttribute("src",link);
+//     console.log(link);
+// });
+
+// async function getImage(){
+//     try{
+//         let res = await axios.get(url2);
+//         //console.log(res.data.message);
+//         return res.data.message;
+//     }
+//     catch(err){
+//         console.log("error occured - ",err);
+//         return "/"; // return a default image path in case of error
+//     }
+    
+// }
+
+
