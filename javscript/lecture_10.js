@@ -65,6 +65,35 @@
 //     }
 // });
 
+ 
+const students = [
+  { name: "Alice", city: "New York", age: 20 },
+  { name: "Bob", city: "Los Angeles", age: 22 },
+  { name: "Charlie", city: "Chicago", age: 19 }
+];
 
+students.forEach(student => {
+  console.log(`My name is ${student.name}, I am ${student.age} years old, and I live in ${student.city}.`);
+});
 
+const totals = products.reduce(
+  (acc, product) => {
+    acc.totalQuantity += product.quantity;
+    acc.totalPrice += product.price * product.quantity;
+    return acc;
+  },
+  { totalQuantity: 0, totalPrice: 0 } // initial values
+);
 
+console.log(`Total Quantity: ${totals.totalQuantity}`);
+console.log(`Total Price: $${totals.totalPrice}`);
+
+const student = [
+  { name: "Alice", city: "New York", age: 20 },
+  { name: "Bob", city: "Los Angeles", age: 22 },
+  { name: "Charlie", city: "Chicago", age: 19 }
+];
+
+students.forEach(student => {
+  console.log(`My name is ${student.name}, I am ${student.age} years old, and I live in ${student.city}.`);
+});
