@@ -1,0 +1,9 @@
+// console.log("hello from script.js");
+// console.log("hello from script.js");
+
+
+let args = process.argv;
+
+for(let i = 2; i<args.length;i++){
+    console.log("hello to",args[i]);
+}
