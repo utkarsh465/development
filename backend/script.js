@@ -11,9 +11,17 @@
 
 // MODULE.EXPORT , REQUIRE(), EXPORTS
 
-const math = require("./Math_function.js");
+// const math = require("./Math_function.js");
 
-console.log("sum is ",math.sum(2,3));
-console.log("mul is ",math.mul(2,3));
-console.log("PI is ",math.PI);
-console.log("g is ",math.g);
+// console.log("sum is ",math.sum(2,3));
+// console.log("mul is ",math.mul(2,3));
+// console.log("PI is ",math.PI);
+// console.log("g is ",math.g);
+
+
+// COMBINIG TWO DIRECTORIES USING MODULES
+
+const info = require("./fruits");
+console.log(info);
+console.log(info[0]);
+console.log(info[0].name);
