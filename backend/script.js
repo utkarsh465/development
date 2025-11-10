@@ -37,3 +37,9 @@
 // console.log("mul is ",mul(2,3));
 // console.log("PI is ",PI);
 // console.log("g is ",g);
+
+import { generate, count } from "random-words";
+console.log(generate({ minLength: 2 }));
+
+
+console.log(generate());

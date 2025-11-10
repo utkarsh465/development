@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "figlet": "^1.9.3",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "random-words": "^2.0.1"
   },
   "name": "backend",
   "version": "1.0.0",
@@ -13,5 +14,5 @@
   "keywords": [],
   "author": "utkarsh raj",
   "license": "ISC",
-  "type":"module"
+  "type": "module"
 }
