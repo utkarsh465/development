@@ -38,8 +38,8 @@
 // console.log("PI is ",PI);
 // console.log("g is ",g);
 
-import { generate, count } from "random-words";
-console.log(generate({ minLength: 2 }));
+// import { generate, count } from "random-words";
+// console.log(generate({ minLength: 2 }));
 
 
-console.log(generate());
+// console.log(generate());
