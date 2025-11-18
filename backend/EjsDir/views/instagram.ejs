@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTAGRAM</title>
+</head> 
+<style>
+    h1{
+        text-align: center;
+        color: purple;
+    }
+</style>
+<body>
+    <h1>Ek cup chai aur phir code vibe hi alg hai  </h1>
+
+    <h2>this page belongs to the following @<%= username %></h2>
+    <button>follow</button>
+    <button>message</button>
+
+    <h2>accounts that follows you</h2>
+    <ul>
+        <% for(let name of followers){ %>
+            <li><%= name %></li>
+        <% } %>
+    </ul>
+    
+    <h2>accounts with less_connections</h2>
+    <ul>
+        <% for(let name of less_connection){ %>
+            <li><%= name %></li>
+        <% } %>
+    </ul> 
+
+</body>
+</html>
