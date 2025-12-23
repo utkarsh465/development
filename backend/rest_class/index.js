@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 8080;
 
+const { v4 : uuidv4 } = require('uuid');
+
+
 app.use(express.urlencoded({extended:true}));
 
 const path = require("path");
@@ -13,16 +16,19 @@ app.use(express.static(path.join(__dirname,"public")));
 
 let posts = [
     {
+        id:uuidv4(),
         username : "utkarsh",
         content : "i love coding",
     },
 
     {
+        id:uuidv4(),
         username : "Raj",
         content : "hard work is important to achieve the success ",
     },
 
     {
+        id:uuidv4(),
         username : "XYZ",
         content : "i got selected for my first internship",
     }
@@ -47,11 +53,19 @@ app.get("/posts/new",(req,res)=>{
 app.post("/posts",(req,res)=>{
     // console.log(req.body);
     let {username,content} = req.body;
-    posts.push({username,content})
+    let id = uuidv4();
+    posts.push({id,username,content})
     // res.send("post request working");
     res.redirect("/posts");
 });
 
+app.get("/posts/:id",(req,res)=>{
+   let {id} = req.params;
+   let post = posts.find((p) => id === p.id);
+   console.log(post);
+//    res.send("request working");
+   res.render("show.ejs",{post});
+});
 
 // it is use to start the server
 
