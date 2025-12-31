@@ -3,7 +3,9 @@ const app = express();
 const port = 8080;
 
 const { v4 : uuidv4 } = require('uuid');
+const methodOverride = require("method-override");
 
+app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({extended:true}));
 
@@ -80,6 +82,8 @@ app.get("/posts/:id/edit",(req,res)=>{
     let {id} = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("edit.ejs",{post});
+    console.log(post);
+
 });
 
 // it is use to start the server
