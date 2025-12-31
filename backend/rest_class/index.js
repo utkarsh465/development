@@ -67,6 +67,7 @@ app.get("/posts/:id",(req,res)=>{
    console.log(post);
 //    res.send("request working");
    res.render("show.ejs",{post});
+   res.redirect("/posts");
 });
 
 app.patch("/posts/:id",(req,res)=>{
@@ -75,7 +76,7 @@ app.patch("/posts/:id",(req,res)=>{
     let post = posts.find((p) => id === p.id);
     post.content = newContent;
     console.log(post);
-    res.send("patch request working");
+    res.redirect("/posts");
 });
 
 app.get("/posts/:id/edit",(req,res)=>{
@@ -86,6 +87,12 @@ app.get("/posts/:id/edit",(req,res)=>{
 
 });
 
+app.delete("/posts/:id",(req,res)=>{
+    let {id} = req.params;
+    posts = posts.filter((p) => p.id !== id);
+    // res.send("deleted successfully");
+    res.redirect("/posts");
+});
 // it is use to start the server
 
 app.listen(port,()=>{
