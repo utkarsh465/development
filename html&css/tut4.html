@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment App - Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2193b0, #6dd5ed); /* blue gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .signup-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .signup-container button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    .signup-container button:hover {
+      background: #45a049;
+    }
+    .message {
+      text-align: center;
+      margin-top: 1rem;
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-container">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <input type="text" id="mobile" placeholder="Mobile Number" required />
+    <button type="submit">Sign Up</button>
+    <div class="message" id="message"></div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('signupForm');
+  const messageDiv = document.getElementById('message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+
+    if (name.length < 3) {
+      showMessage('Name must be at least 3 characters.', true);
+      return;
+    }
+    if (!validateEmail(email)) {
+      showMessage('Invalid email format.', true);
+      return;
+    }
+    if (password.length < 6) {
+      showMessage('Password must be at least 6 characters.', true);
+      return;
+    }
+    if (!/^\d{10}$/.test(mobile)) {
+      showMessage('Mobile number must be 10 digits.', true);
+      return;
+    }
+
+    showMessage('Signup successful! Redirecting...', false);
+    setTimeout(() => {
+      window.location.href = 'payment-dashboard.html';
+    }, 2000);
+  });
+
+  function showMessage(msg, isError) {
+    messageDiv.textContent = msg;
+    messageDiv.className = isError ? 'message error' : 'message';
+  }
+
+  function validateEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+</script>
+
+</body>
+</html>

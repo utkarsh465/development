@@ -1,0 +1,51 @@
+/* h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+#outer{
+    font-size: 25px;
+}
+#inner{
+    font-size: 10px;
+} */
+/* div{
+    height: 200px;
+    width: 200px;
+    border:10px solid red;
+    padding: 20px;
+    margin: 50px;
+} */
+div{
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    margin: 25px;
+    display: inline-block;
+    /* background-image: url("utkarsh2.jpg"); */
+
+}
+body{
+    background-image: url("OIP.jpeg");
+    background-size: cover;
+    
+}
+#div1{
+    position: relative;
+    top: 10px;
+    background-color: rgba(0,0,255, 0.5);
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-image: url("utkarsh1.jpg");
+    background-size: cover;
+}
+#div2{
+    background-color: rgba(0,0,255, 0.75);
+    background-image: url("OIP.jpeg");
+    background-size: cover;
+
+}
+#div3{
+    background-color: rgba(0,0,255, 1);
+}

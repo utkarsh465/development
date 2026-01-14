@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+}
+.heading{
+    cursor: pointer;
+}
+div{
+    height: 100px;
+    width: 250px;
+    border:1px solid black;
+    margin: auto;
+    margin-top: 5px;
+
+}
+button{
+    text-align: center;
+    cursor: pointer;
+}
