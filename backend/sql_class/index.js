@@ -13,6 +13,9 @@ try{
   connection.query("SHOW TABLES",(err,result) =>{
     if(err) throw err;
     console.log(result);
+    console.log(result.length);
+    console.log(result[0]);
+    console.log(result[1]);
   });
 
 }
