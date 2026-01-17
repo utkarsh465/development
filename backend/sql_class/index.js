@@ -9,19 +9,40 @@ const connection = mysql.createConnection({
   password:'Utkarsh@9955'      
 });
 
+
+// insert into users using placeholder
+
+let q = "INSERT INTO users (id,username,email,password_hash) VALUES ?";
+let users1 = [
+  ["101","123_ab","abc@gmail.com","abc121b"],
+  ["102","123_abc","utkarsh@gmail.com","abc121b"]
+];
+
 try{
-  connection.query("SHOW TABLES",(err,result) =>{
+  connection.query(q, [users1], (err,result) => {
     if(err) throw err;
     console.log(result);
-    console.log(result.length);
-    console.log(result[0]);
-    console.log(result[1]);
   });
 
 }
-catch(err){
-  console.log(err);
+catch(err){    
+  console.log(err); 
 }
+
+
+// try{
+//   connection.query("SHOW TABLES",(err,result) =>{
+//     if(err) throw err;
+//     console.log(result);
+//     console.log(result.length);
+//     console.log(result[0]);
+//     console.log(result[1]);
+//   });
+
+// }
+// catch(err){
+//   console.log(err);
+// }
 
 let getRandomUser = () => {
   return {
