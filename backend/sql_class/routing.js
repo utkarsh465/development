@@ -9,8 +9,8 @@ const path = require("path");
 
 // usiing ejs as view engine
 
-app.ejs("view engine","ejs");
-app.use("views",path.join(__dirname,"/views"));
+app.set("view engine","ejs");
+app.set("views",path.join(__dirname,"/views"));
 
 // FORMING CONNECTION
 const connection = mysql.createConnection({
@@ -35,9 +35,9 @@ app.get("/",(req,res) =>{
   try{
     connection.query(q, (err,result) => {
       if(err) throw err;
-      console.log(result[0]["count(*)"]);
+      let count = result[0]["count(*)"];
       // res.send(result[0]["count(*)"]);
-      res.send("success");
+      res.render("home.ejs", { count });
     });
 
   }
