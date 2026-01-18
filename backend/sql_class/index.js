@@ -12,14 +12,47 @@ const connection = mysql.createConnection({
 
 // insert into users using placeholder
 
+// let q = "INSERT INTO users (id,username,email,password_hash) VALUES ?";
+// let users1 = [
+//   ["101","123_ab","abc@gmail.com","abc121b"],
+//   ["102","123_abc","utkarsh@gmail.com","abc121b"]
+// ];
+
+// try{
+//   connection.query(q, [users1], (err,result) => {
+//     if(err) throw err;
+//     console.log(result);
+//   });
+
+// }
+// catch(err){    
+//   console.log(err); 
+// }
+
+//INSERT INTO  BULK(USING FAKER)
+
+let getRandomUser = () => {
+  return [
+    faker.string.uuid(),
+    faker.internet.username(),
+    faker.internet.email(),
+    faker.internet.password(),
+  ];
+    
+  
+};
+
+
 let q = "INSERT INTO users (id,username,email,password_hash) VALUES ?";
-let users1 = [
-  ["101","123_ab","abc@gmail.com","abc121b"],
-  ["102","123_abc","utkarsh@gmail.com","abc121b"]
-];
+
+let data = [];
+for(let i = 1; i<=100; i++){
+  //console.log(getRandomUser());    // to see the random user generated
+  data.push(getRandomUser());
+}
 
 try{
-  connection.query(q, [users1], (err,result) => {
+  connection.query(q, [data], (err,result) => {
     if(err) throw err;
     console.log(result);
   });
@@ -28,7 +61,6 @@ try{
 catch(err){    
   console.log(err); 
 }
-
 
 // try{
 //   connection.query("SHOW TABLES",(err,result) =>{
@@ -44,13 +76,13 @@ catch(err){
 //   console.log(err);
 // }
 
-let getRandomUser = () => {
-  return {
-    Id: faker.string.uuid(),
-    name: faker.internet.username(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-  };
-};
+// let getRandomUser = () => {
+//   return {
+//     Id: faker.string.uuid(),
+//     name: faker.internet.username(),
+//     email: faker.internet.email(),
+//     password: faker.internet.password(),
+//   };
+// };
 
 // console.log(getRandomUser());
