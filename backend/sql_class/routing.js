@@ -47,6 +47,31 @@ app.get("/",(req,res) =>{
   }
 })
 
+
+// creating show route to fetch and show(userid , username, email)
+
+app.get("/users",(req,res) => {
+  // res.send("success");
+  let q = `SELECT * FROM users`;
+  try{
+    connection.query(q, (err,users) => {
+      if(err) throw err;
+        // console.log(result);
+        // res.send(result);
+        res.render("showusers.ejs", { users });
+    });
+
+  }
+  catch(err){    
+  console.log(err);
+  res.send("some error in DB") 
+  }
+
+})
+
+// Creating EDIT ROute
+
+
 // STARTING SERVER
 app.listen("8080",() =>{
     console.log("server is listening on port 8080");
