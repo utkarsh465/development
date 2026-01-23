@@ -6,6 +6,9 @@ const express = require('express');
 const app = express();
 const path = require("path");
 
+const methodoverirde = require("method-override");
+app.use(methodoverirde("_method"));
+app.use(express.urlencoded({ extended: true }));      //form ke data ko parse krne ke liye iska use krte hai 
 
 // usiing ejs as view engine
 
@@ -71,6 +74,58 @@ app.get("/users",(req,res) => {
 
 // Creating EDIT ROute
 
+app.get("/users/:id/edit",(req,res) => {
+  let {id} = req.params;
+  let q = `select * from users where id = '${id}'`;
+  try{
+    connection.query(q, (err,users) => {
+      if(err) throw err;
+      let user = users[0];
+        // console.log(result);      
+        res.render("edit.ejs", { user });
+    });
+
+  }
+  catch(err){    
+  console.log(err);
+  res.send("some error in DB") 
+  }
+})
+
+// update {DB} route
+app.patch("/users/:id", (req,res) => {
+  // res.send("update route reached");
+  let {id} = req.params;
+  let{password:formPass,username:newUsername} = req.body;
+
+  let q = `select * from users where id = '${id}'`;
+  try{
+    connection.query(q, (err,users) => {
+      if(err) throw err;
+      let user = users[0];
+
+      if(formPass != user.password_hash){
+        res.send("wrong password");
+      }
+      else{
+        let q2 = `UPDATE users SET username = '${newUsername}' WHERE id = '${id}'`;
+        connection.query(q2, (err,result) => {
+          if(err) throw err;
+          res.redirect("/users");
+        });
+      }
+      // console.log(result);      
+      // res.send(user);
+    });
+
+  }
+  catch(err){    
+  console.log(err);
+  res.send("some error in DB") 
+  }
+});
+
+
 
 // STARTING SERVER
 app.listen("8080",() =>{
@@ -78,15 +133,3 @@ app.listen("8080",() =>{
 })
 
 
-// try{
-//   connection.query(q, [users1], (err,result) => {
-//     if(err) throw err;
-//     console.log(result);
-//   });
-
-// }
-// catch(err){    
-//   console.log(err); 
-// }
-
-// connection.end();
