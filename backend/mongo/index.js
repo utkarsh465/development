@@ -22,5 +22,36 @@ const userSchema = new mongoose.Schema({
     age:Number
 });
 
-// const User = mongoose.model("user",userSchema);
-const product = mongoose.model("product",userSchema);
+const User = mongoose.model("user",userSchema);
+// const product = mongoose.model("product",userSchema);
+
+// const user1 = new User({
+//     name:"utkarsh",
+//     email:"utkarsh@gmail.com",
+//     age:21
+// });
+
+// user1.save();
+
+// const user2 = new User({
+//     name:"harsh",
+//     email:"harsh@gmail.com",
+//     age:21
+// });
+
+// user2.save()
+//     .then((res) =>{
+//         console.log(res);
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//     });
+
+
+User.insertMany ([
+    {name:"Rahul",email:"rahul@gmail.com",age:21},
+    {name:"Diksha",email:"diksha@gmail.com",age:20},
+    {name:"Raj",email:"raj@gmail.com",age:22}
+]).then((res) =>{
+    console.log(res);
+});
