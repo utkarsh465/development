@@ -23,6 +23,56 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("user",userSchema);
+
+// User.find({age:{$lt:21}})
+// User.findOne({age:{$lt:21}})
+//     .then((res) =>{
+//         console.log(res);
+//     }).catch(err =>{
+//         console.log(err);
+//     })
+
+// User.updateOne({age:{$lt:21}},{name:"utkarsh"})
+// User.updateMany({age:{$gt:21}},{name:"Steve"})
+//     .then((res) =>{
+//         console.log(res);
+//     }).catch(err =>{
+//         console.log(err);
+//     })
+
+
+// User.deleteOne({age:{$gt:21}})
+//     .then((res) =>{
+//         console.log(res);
+//     }).catch(err =>{
+//         console.log(err);
+//     })
+
+
+
+// User.deleteMany({age:{$gt:20}})
+//     .then((res) =>{
+//         console.log(res);
+//     }).catch(err =>{
+//         console.log(err);
+//     })
+
+
+
+User.findByIdAndDelete("69766bff0b4bcbad0c2e521d")
+    .then((res) =>{
+        console.log(res);
+    }).catch(err =>{
+        console.log(err);
+    })
+
+
+User.findOneAndDelete({name:"utkarsh"})
+    .then((res) =>{
+        console.log(res);
+    }).catch(err =>{
+        console.log(err);
+    })
 // const product = mongoose.model("product",userSchema);
 
 // const user1 = new User({
@@ -48,10 +98,10 @@ const User = mongoose.model("user",userSchema);
 //     });
 
 
-User.insertMany ([
-    {name:"Rahul",email:"rahul@gmail.com",age:21},
-    {name:"Diksha",email:"diksha@gmail.com",age:20},
-    {name:"Raj",email:"raj@gmail.com",age:22}
-]).then((res) =>{
-    console.log(res);
-});
+// User.insertMany ([
+//     {name:"Rahul",email:"rahul@gmail.com",age:21},
+//     {name:"Diksha",email:"diksha@gmail.com",age:20},
+//     {name:"Raj",email:"raj@gmail.com",age:22}
+// ]).then((res) =>{
+//     console.log(res);
+// });
