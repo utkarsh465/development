@@ -1,10 +1,19 @@
 body{
     margin-left: 20px;
+    background-color: lightyellow;
+    
+}
+.chat_container{
+    display: flex;
+    flex-wrap: wrap;        /* line break allow karega */
+    gap: 20px;              /* cards ke beech space */
+    justify-content: flex-start;
 }
 .chat{
     background-color: aliceblue;
     padding: 20px;
     border-radius: 16px;
+    width: 260px;
     display: inline-block;
 
 }
@@ -13,4 +22,38 @@ body{
     color: white;
     padding: 5px 15px;
     border-radius: 16px;
+}
+.main{
+    margin-left: 40%;
+}
+.btn1{
+    margin-left: 40%;
+    background-color: lightgrey;
+}
+.new{
+    background-color: lightskyblue;
+    min-height: 30vh;
+    width: 250px;
+    max-width: 360px;
+
+    margin: 10vh auto;   /* 🔥 proper centering */
+
+    padding: 10px 15px;
+    border-radius: 16px;
+    align-items: center;
+}
+.btn2{
+    background-color: lightgrey;
+}
+
+.container{
+    background-color: lightskyblue;
+    min-height: 50vh;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 16px;
+    margin-top: 10%;
+    margin-left: 30%;
 }

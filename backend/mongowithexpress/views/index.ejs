@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h3>All chats</h3>
+    <h1 class="main">All chats</h1>
     <form action="/chats/new" method="get">
-        <button>New chats</button>
+        <button class="btn1">New chats</button>
     </form>
     <br>
 
-    <%for(let chat of chats){%>
+    <div class="chat_container">
+        <%for(let chat of chats){%>
         <div class = "chat">
             <p>From:<%=chat.from%></p>
             <div class="message">
                 <p><%=chat.msg%></p>
+
                 <form method = "GET" action="/chats/<%=chat._id%>/edit ">
-                    <button>edit</button>
+                    <button type="submit" onclick="return confirmEdit()">edit</button>
                 </form>
+                
                 <br />
+
+
                 <form method = "POST" action="/chats/<%=chat._id%>?_method=DELETE">
-                    <button>delete</button>
+                    <button type="submit" onclick="return confirmDelete()">delete</button>
                 </form>
+
             </div>
             <p>Recieved by:<%=chat.to%></p>
             <hr />
@@ -33,6 +39,18 @@
         </div>
         <br><br />
     <%}%>
+    </div>
+
+
+    <script>
+        function confirmDelete(){
+            return confirm("Are you sure you want to delete this chat?");
+        }
+
+        function confirmEdit(){
+            return confirm("Are you sure you want to edit this chat?");
+        }
+    </script>
 </body>
 </html>
 

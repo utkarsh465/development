@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write New chats</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="new">
+        <h3>Write New chats</h3>
 
-<h3>Write New chats</h3>
+        <form action="/chats" method="POST">
 
-<form action="/chats" method="POST">
+            <input type="text" placeholder="who are you?" name="from">
+            <br><br>
 
-    <input type="text" placeholder="who are you?" name="from">
-    <br><br>
+            <input type="text" placeholder="add receiver" name="to">
+            <br><br>
 
-    <textarea name="msg" placeholder="Write Your Msg Here"></textarea>
-    <br><br>
+            <textarea name="msg" placeholder="Write Your Msg Here" cols="25"></textarea>
+            <br><br>
 
-    <input type="text" placeholder="add receiver" name="to">
-    <br><br>
+            <button class="btn2">Create new chat</button>
 
-    <button>Create new chat</button>
+        </form>
+    </div>
 
-</form>
+
 
 </body>
 </html>
