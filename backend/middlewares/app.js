@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 // app.get("/",(req,res) =>{
@@ -7,13 +7,13 @@ const app = express();
 
 app.use("/api",(req,res,next)=>{
     let {token} = req.query;
-    if(token === "give access"){
-        next();   
+    if(token === "giveaccess"){
+       return next();   
     }
     res.send("ACCESS DENIED!");
 });
 
-app.set("/api",(req,res)=>{
+app.get("/api",(req,res)=>{
     res.send("hello from api");
 })
 
