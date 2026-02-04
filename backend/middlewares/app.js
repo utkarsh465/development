@@ -15,7 +15,9 @@ app.use("/api",(req,res,next)=>{
 
 
 
-
+app.get("api",(req,res)=>{
+    res.send("Welcome to the protected API route!");
+})
 
 app.listen("8080",()=>{
     console.log("Server is running on port 8080");
