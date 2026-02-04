@@ -13,9 +13,8 @@ app.use("/api",(req,res,next)=>{
     res.send("ACCESS DENIED!");
 });
 
-app.get("/api",(req,res)=>{
-    res.send("hello from api");
-})
+
+
 
 
 app.listen("8080",()=>{
