@@ -16,6 +16,8 @@ app.use("/api",(req,res,next)=>{
 app.set("/api",(req,res)=>{
     res.send("hello from api");
 })
+
+
 app.set("/kuch bii",(req,res)=>{
     res.send("hello from api");
 })
