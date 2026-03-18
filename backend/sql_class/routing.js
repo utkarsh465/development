@@ -10,7 +10,7 @@ const methodoverirde = require("method-override");
 app.use(methodoverirde("_method"));
 app.use(express.urlencoded({ extended: true }));      //form ke data ko parse krne ke liye iska use krte hai 
 
-// usiing ejs as view engine
+// using ejs as view engine
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));

@@ -18,6 +18,12 @@ app.get("/api",(req,res)=>{
 })
 
 
+app.set("/kuch bii",(req,res)=>{
+    res.send("hello from api");
+})
+
+
+
 app.listen("8080",()=>{
     console.log("Server is running on port 8080");
 });
