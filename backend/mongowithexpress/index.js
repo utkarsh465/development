@@ -3,7 +3,9 @@ const app = express();
 
 const mongoose = require('mongoose');
 const path = require("path");
-const method_override = require("method-override");
+const method_override = require("method-override");   // method override is used to override the method of form from post to put and delete because form only supports get and post method
+
+
 // how to link style.css file to ejs file
 
 app.use(express.static(path.join(__dirname,"public")));
