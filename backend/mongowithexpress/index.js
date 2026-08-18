@@ -70,7 +70,7 @@ app.get("/chats/new",(req,res) =>{
 // create route
 
 app.post("/chats",async(req,res) =>{
-    let{from,to,msg} = req.body; 
+    let{from,to,msg} = req.body;        // console.log(from,to,msg);
 
     let newChat = new chat({
         from:from,
